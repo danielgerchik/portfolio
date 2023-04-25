@@ -1,0 +1,31 @@
+.textContent {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    svg {
+        position: absolute;
+        z-index: -1;
+        width: 400px;
+        opacity: 0.1;
+        &:last-of-type {
+            right: 0;
+            top: 40%;
+        }
+    }
+}
+.mainText {
+    position: relative;
+    max-width: 6em;
+}
+.description {
+    font-size: 50px;
+    max-width: 10em;
+}
+.bgCircle {
+    
+}

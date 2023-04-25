@@ -1,6 +1,7 @@
-import Orange from "./components/Orange/Orange";
-import Green from "./components/Green/Green";
-import Home from "./components/Home/Home";
+import Home from "./Pages/Home/Home";
+import { About } from "./Pages/About/About";
+import Header from "./components/Header/Header";
+import Transition from "./components/Transition/Transition";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"
 
@@ -9,11 +10,11 @@ function App() {
 
   return (
     <div className="wrapper">
-      <AnimatePresence initial={true}>
+      <AnimatePresence initial={false}>
+        <Header/>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/orange" element={<Orange />} />
-        <Route path="/green" element={<Green/>} />
+        <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />} />
       </Routes>
       </AnimatePresence>
     </div>    

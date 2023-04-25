@@ -1,0 +1,65 @@
+.animationBlock {
+	font-family: Arial, Helvetica, sans-serif;
+    transform: translateY(90%) scale(1);
+	opacity: 1;
+	border: 3px #000 solid;
+    position: fixed;
+	z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	border-radius: 50%;
+	transition: 0.3s ease 0s;
+    animation: circle 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s;
+    &:hover {
+        transform: translateY(88%) scale(1);
+    }
+    span {
+        &:first-of-type {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-top: 15px;
+            color: #000;
+            font-size: 70px;
+            text-decoration: none;
+            .link {
+
+            }
+        }
+        &:last-of-type {
+            color: #fff;
+            font-size: 70px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
+@keyframes circle{
+
+	0%{
+		background-color: #fff;
+        
+	}
+	15% {
+		cursor: auto;
+		background-color: #000;
+        
+	}
+	50%{
+		transform: translateY(35%) scale(1.5, 1.5);
+		background-color: #000;
+		cursor: auto;
+	}
+	100%{
+		transform: translateY(0%) scale(1.5, 1.5);
+		background-color: #000;
+		cursor: auto;
+	}
+	}
