@@ -40,6 +40,9 @@
     }
 }
 
+.clicked .animationBlock {
+    transform: translateY(88%) scale(1);
+}
 
 @keyframes circle{
 

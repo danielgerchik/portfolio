@@ -20,7 +20,7 @@ export const Home = (props) => {
         </div>
       </div>
     </motion.div>
-    <Transition/>
+    <Transition currentPage= 'Home' nextPage='About'/>
     </>
   )
 }
