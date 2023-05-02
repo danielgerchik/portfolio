@@ -2,9 +2,10 @@ import React from 'react'
 import s from './About.module.scss'
 import Transition from '../../components/Transition/Transition'
 import { motion } from "framer-motion"
+import Withgetpath from '../../HOCS/Withgetpath'
 
 
-export const About = (props) => {
+const About = (props) => {
 
   return (
     <> 
@@ -13,3 +14,5 @@ export const About = (props) => {
     </>
   )
 }
+
+export default Withgetpath(About)

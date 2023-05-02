@@ -1,5 +1,5 @@
 import Home from "./Pages/Home/Home";
-import { About } from "./Pages/About/About";
+import About from "./Pages/About/About";
 import Header from "./components/Header/Header";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"
@@ -13,14 +13,13 @@ export const MyContext = createContext()
 function App() {
   const location = useLocation()
   const [hasClickedOnBubble, setHasClickedOnBubble] = useState(false)
-
+  const [currentPath, setCurrentPath] = useState('')
 
   return (
     <div className="wrapper">
-      <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble}}>
+      <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble, setCurrentPath, currentPath}}>
       <AnimatePresence initial={false}>
         <Header/>
-        
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />} />

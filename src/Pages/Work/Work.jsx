@@ -1,6 +1,7 @@
 import React from 'react'
 import Transition from '../../components/Transition/Transition'
 import { motion } from "framer-motion"
+import Withgetpath from '../../HOCS/Withgetpath'
 
 function Work() {
   return (
@@ -11,4 +12,4 @@ function Work() {
   )
 }
 
-export default Work
+export default Withgetpath(Work)

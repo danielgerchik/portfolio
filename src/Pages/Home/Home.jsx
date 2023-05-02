@@ -2,6 +2,7 @@ import React from 'react'
 import s from './Home.module.scss'
 import Transition from '../../components/Transition/Transition'
 import { motion } from "framer-motion"
+import Withgetpath from '../../HOCS/Withgetpath'
 
 export const Home = (props) => {
   return (
@@ -25,4 +26,4 @@ export const Home = (props) => {
   )
 }
 
-export default Home
+export default Withgetpath(Home)

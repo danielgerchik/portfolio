@@ -8,10 +8,6 @@ const Transition = ({currentPage, nextPage}) => {
 
   const {hasClickedOnBubble, setHasClickedOnBubble} = useContext(MyContext)
   
-
-    
-
-
   const [pageName ,setPageName] = useState(currentPage)
 
   useEffect(()=> {
