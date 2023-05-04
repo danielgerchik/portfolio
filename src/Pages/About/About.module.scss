@@ -6,14 +6,30 @@ flex-direction: column;
 justify-content: center;
 }
 .text_wrap {
+    position: relative;
     text-align: center;
+}
+
+.bg_blob {
+    position: absolute;
+    width: 300px;
+    opacity: .1;
+}
+#blob_1 {
+    top: 0;
+    right: 0;
+}
+#blob_2 {
+    top: 30%;
+    left: 30%;
+    transform: rotate(90deg);
 }
 .title {
     position: relative;
     display: inline-block;
     font-weight: 700;
     font-size: 60px;
-    margin-bottom: .5em;
+    margin-bottom: .7em;
     padding-bottom: .1em;
     &::before {
         content: '';
@@ -27,7 +43,7 @@ justify-content: center;
 }
 .main_text {
     font-size: 35px;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
     .popup_text {
         height: 1em;
         display: inline-block;
@@ -45,7 +61,7 @@ justify-content: center;
 .label {
     font-size: 40px;
     font-weight: 700;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
 }
 .stack_items {
     display: flex;

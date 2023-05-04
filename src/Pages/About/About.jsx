@@ -13,6 +13,12 @@ const About = (props) => {
       <div className="container">
         <div className={s.about}>
           <div className={s.text_wrap}>
+          <svg className={s.bg_blob} id={s.blob_1} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#000000" d="M36.9,-67.8C41.1,-61.5,33.2,-38.1,30.2,-23.9C27.1,-9.8,28.9,-4.9,28.4,-0.3C27.9,4.3,25.1,8.6,22.9,13.6C20.6,18.6,19,24.4,15.3,32.8C11.6,41.2,5.8,52.3,-5.2,61.2C-16.1,70.2,-32.3,77,-38.8,70.2C-45.4,63.5,-42.4,43.1,-37.5,29.1C-32.7,15.1,-26.1,7.6,-22.6,2C-19.2,-3.6,-19,-7.2,-19.7,-14C-20.3,-20.7,-21.8,-30.5,-18.7,-37.5C-15.5,-44.5,-7.8,-48.6,4.3,-56C16.3,-63.4,32.7,-74.2,36.9,-67.8Z" transform="translate(100 100)" />
+</svg>
+<svg viewBox="0 0 200 200" className={s.bg_blob} id={s.blob_2} xmlns="http://www.w3.org/2000/svg">
+<path fill="#000000" d="M35.5,-44.2C43,-28,43.9,-14,46.1,2.2C48.2,18.3,51.6,36.6,44.1,41.5C36.6,46.3,18.3,37.6,2.6,35C-13,32.4,-26,35.7,-32.4,30.9C-38.7,26,-38.4,13,-36,2.3C-33.7,-8.3,-29.3,-16.7,-23,-32.9C-16.7,-49.1,-8.3,-73.2,2.8,-76C14,-78.9,28,-60.4,35.5,-44.2Z" transform="translate(100 100)" />
+</svg>
           <h3 className={s.title}>About me</h3>
           <div className={s.main_text}>I'm <span className={s.popup_text}><span>Daniel Gerchik</span></span>, a front end developer who is always looking to improve his code and make more impressive websites. You can always contact me in any way you want and I will be happy to cooperate and have new projects</div>
           <h4 className={s.label}>Technology Stack</h4>
