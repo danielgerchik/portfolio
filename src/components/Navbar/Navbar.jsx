@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { MyContext } from '../../App'
 
 export default function Navbar() {
-  const activeStyle = s.active
   const {currentPath} = useContext(MyContext)
   
   const list = useRef(null)
@@ -13,10 +12,10 @@ export default function Navbar() {
    
     Array.from(list.current.childNodes).forEach(el => {
 
-      el.classList.remove(activeStyle)
+      el.classList.remove(s.active)
 
       if(el.childNodes[0].getAttribute('href') == currentPath) {
-        el.classList.add(activeStyle)
+        el.classList.add(s.active)
       }
       
     })

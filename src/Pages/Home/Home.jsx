@@ -17,7 +17,7 @@ export const Home = (props) => {
   <path fill="#000000" d="M26.4,-47.1C32.3,-42.4,33.7,-31.3,35.9,-22.4C38.1,-13.5,41,-6.8,37.4,-2.1C33.7,2.5,23.5,5.1,20.6,12.8C17.7,20.5,22.2,33.4,20,43C17.8,52.7,8.9,59.1,0.7,58C-7.6,56.8,-15.2,48.1,-19.4,39.7C-23.7,31.2,-24.7,23,-31.1,16.4C-37.6,9.9,-49.6,4.9,-49.7,-0.1C-49.9,-5.1,-38.3,-10.3,-31.6,-16.4C-24.9,-22.5,-23,-29.6,-18.6,-35.1C-14.1,-40.6,-7.1,-44.6,1.6,-47.4C10.3,-50.2,20.6,-51.8,26.4,-47.1Z" transform="translate(100 100)" />
 </svg>
         <h1 className={s.mainText}>Effective site building</h1>
-        <h2 className={s.description}>Front end developement with a particular passion for design, creativity and communication.</h2>
+        <h2 className={s.description}>Front end developement with a particular passion for creativity, communication and attention to details.</h2>
         </div>
       </div>
     </motion.div>
