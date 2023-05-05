@@ -1,0 +1,43 @@
+.content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.items {
+    position: relative;
+    width: 100%;
+}
+.blob_bg {
+    width: 200px;
+    position: absolute;
+    opacity: .1;
+}
+#blob1 {
+    top: 35%;
+    right: 0%;
+}
+#blob2 {
+    top: 0%;
+    left: 0%;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+    &:not(:first-of-type) {
+        border-top: 5px solid #000;
+    }
+    &:not(:last-of-type) {
+        border-bottom: 5px solid #000;
+    }
+    .name {
+        font-size: 100px;
+        font-weight: 700;
+    }
+    .arrow {
+        img {
+            width: 120px;
+        }
+    }
+}

@@ -4,9 +4,20 @@
     align-items: center;
 }
 .items {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+.line_bg {
+position: absolute;
+width: 90%;
+height: 100px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 20px;
+border: 10px solid RGBA(0,0,0,0.1);
 }
 .item {
     position: relative;
