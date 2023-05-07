@@ -19,17 +19,14 @@ function Work() {
           <svg className={s.blob_bg} id={s.blob2} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
          <path fill="#000000" d="M45.8,-76.9C60.2,-71.1,73.2,-60.4,73.1,-46.8C73.1,-33.1,60.1,-16.6,59.6,-0.3C59.1,16,71.1,32,70.1,43.9C69.2,55.8,55.2,63.6,41.4,71C27.5,78.4,13.7,85.4,3.5,79.4C-6.8,73.4,-13.7,54.5,-20.2,42.9C-26.8,31.2,-33,27,-38.5,21C-44,15.1,-48.8,7.6,-48.3,0.3C-47.9,-7,-42.3,-14.1,-40.3,-26.2C-38.4,-38.2,-40.1,-55.3,-34,-65.9C-27.9,-76.4,-13.9,-80.4,0.9,-81.9C15.7,-83.5,31.5,-82.7,45.8,-76.9Z" transform="translate(100 100)" />
          </svg>
-          <div className={s.item}>
-            <div className={s.name}>Test</div>
-            <div className={s.arrow}><img src="/img/icons/next.png"/></div>
+         <div className={s.item}>
+            <a href='##' className={s.name}>Test<div className={s.arrow}><img src="/img/icons/next.png"/></div></a>
           </div>
           <div className={s.item}>
-            <div className={s.name}>Test</div>
-            <div className={s.arrow}><img src="/img/icons/next.png"/></div>
+            <a href='##' className={s.name}>Test<div className={s.arrow}><img src="/img/icons/next.png"/></div></a>
           </div>
           <div className={s.item}>
-            <div className={s.name}>Test</div>
-            <div className={s.arrow}><img src="/img/icons/next.png"/></div>
+            <a href='##' className={s.name}>Test<div className={s.arrow}><img src="/img/icons/next.png"/></div></a>
           </div>
         </div>
         </div>
