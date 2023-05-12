@@ -53,7 +53,14 @@ border: 10px solid RGBA(0,0,0,0.1);
             &::before {
                 opacity: 1;
                 pointer-events: auto;
+                animation: circle 2s ease forwards;
             }
         }
+    }
+}
+
+@keyframes circle {
+    100% {
+        transform: scale(3);
     }
 }
