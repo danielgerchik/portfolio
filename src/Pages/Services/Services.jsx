@@ -6,14 +6,16 @@ import s from './Services.module.scss'
 
 function Services() {
 
-  const bgNumber = useRef(null)
+  const bgNumberOne = useRef(null)
+  const bgNumberTwo = useRef(null)
 
   function moveBg(e) {
 
     let x = e.clientX / window.innerWidth
     let y = e.clientY / window.innerHeight
 
-    bgNumber.current.style.transform =  `translate(-${x * 50}px, -${y * 50}px) translate(-50%, -50%)` 
+    bgNumberOne.current.style.transform =  `translate(-${x * 50}px, -${y * 50}px) translate(-50%, -50%)` 
+    bgNumberTwo.current.style.transform =  `translate(-${x * 50}px, -${y * 50}px) translate(-50%, -50%)` 
 
   }
 
@@ -25,11 +27,11 @@ function Services() {
       <div className="container">
         <div className={s.content}>
           <div className={s.halfscreen}>
-            <span ref={bgNumber} className={s.bg_number}>01</span>
+            <span ref={bgNumberOne} className={s.bg_number}>01</span>
             <div className={s.label}>Completely make any website</div>
           </div>
           <div className={s.halfscreen}>
-          <span className={s.bg_number}>02</span>
+          <span ref={bgNumberTwo} className={s.bg_number}>02</span>
             <div className={s.label}>Implement a CMS system</div>
           </div>
         </div>

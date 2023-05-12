@@ -25,6 +25,39 @@
     font-size: 60px;
     max-width: 10em;
 }
-.bgCircle {
-    
+.popup_text {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 1em;
+    overflow: hidden;
+    vertical-align: top;
+    span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: inherit;
+        animation: text_to_top 1s ease 0s forwards;
+        &.active {
+            animation: text_from_bottom 1s ease .6s forwards;
+            top: 100%;
+        }
+    }
+}
+
+@keyframes text_from_bottom {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes text_to_top {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -100%;
+    }
 }

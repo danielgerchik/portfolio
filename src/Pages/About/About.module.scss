@@ -12,6 +12,7 @@ justify-content: center;
 
 .bg_blob {
     position: absolute;
+    z-index: -1;
     width: 300px;
     opacity: .1;
 }
@@ -51,7 +52,7 @@ justify-content: center;
         vertical-align: top;
         span {
             display: inline-block;
-            transform: translateY(100%);
+            transform: translateY(-100%);
             animation: show_text 1s ease 2.5s forwards;
         }
     }
@@ -67,7 +68,8 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    width: 80%;
+    margin: 0 auto;
 }
 .item {
     position: relative;
