@@ -1,0 +1,13 @@
+.bg_animation{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .blob_wrap {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+}

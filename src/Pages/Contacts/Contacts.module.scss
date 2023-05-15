@@ -21,8 +21,12 @@ border: 10px solid RGBA(0,0,0,0.1);
 }
 .item {
     position: relative;
+    overflow: hidden;
     svg {
         width: 350px;
+        path {
+            transition: .3s ease 0s;
+        }
     }
     .link_field {
         position: absolute;
@@ -35,6 +39,7 @@ border: 10px solid RGBA(0,0,0,0.1);
         text-decoration: none;
         font-size: 40px;
         color: #000;
+        transition: 1s ease 0s;
         &::before {
             content: '';
             position: absolute;
@@ -45,21 +50,30 @@ border: 10px solid RGBA(0,0,0,0.1);
             height: 10px;
             background-color: #000;
             border-radius: 50%;
-            opacity: 0;
             pointer-events: none;
-            transition: .3s ease 0s;
+            transition: 1s ease 0s;
+            transform: scale(0);
         }
         &:hover {
             &::before {
-                opacity: 1;
                 pointer-events: auto;
-                animation: circle 2s ease forwards;
+                animation: circle_hover 1s ease forwards;
             }
+        }
+    }
+    &.active {
+        svg {
+            path {
+                fill: #000;
+            }
+        }
+        a {
+            color: #fff;
         }
     }
 }
 
-@keyframes circle {
+@keyframes circle_hover {
     100% {
         transform: scale(3);
     }
