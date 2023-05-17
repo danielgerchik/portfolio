@@ -1,5 +1,6 @@
 span.blob{
     position: absolute;
+    z-index: 56;
     display: inline-block;
     width: 300px;
     height: 300px;
@@ -12,6 +13,7 @@ span.blob{
     animation-fill-mode: forwards;
     &.active {
         animation: show_circles 3s ease 0s forwards;
+        z-index: 55;
     }
     &:first-child {
         top: 10%;
@@ -85,6 +87,34 @@ span.blob{
         top: 12%;
         left: 21%;
     }
+    &:nth-child(19) {
+        top: 45%;
+        left: 23%;
+    }
+    &:nth-child(20) {
+        top: 43%;
+        left: 40%;
+    }
+    &:nth-child(21) {
+        top: 45%;
+        left: 61%;
+    }
+    &:nth-child(22) {
+        top: 71%;
+        left: 0%;
+    }
+    &:nth-child(23) {
+        top: 13%;
+        left: 69%;
+    }
+    &:nth-child(24) {
+        top: 13%;
+        left: 0%;
+    }
+    &:nth-child(25) {
+        top: 14%;
+        left: 56%;
+    }
     &:last-child {
         top: 10%;
         left: 10%;
@@ -102,5 +132,6 @@ span.blob{
     100% {
         transform: scale(3);
         opacity: 1;
+        pointer-events: auto;
     }
 }

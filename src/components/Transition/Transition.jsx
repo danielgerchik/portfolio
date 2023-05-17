@@ -6,7 +6,7 @@ import { MyContext } from '../../App'
 
 const Transition = ({currentPage, nextPage}) => {
 
-  const {hasClickedOnBubble, setHasClickedOnBubble} = useContext(MyContext)
+  const {hasClickedOnBubble, setHasClickedOnBubble, contacts, home} = useContext(MyContext)
   
   const [pageName ,setPageName] = useState(currentPage)
 
@@ -19,7 +19,7 @@ const Transition = ({currentPage, nextPage}) => {
 
   return (
     <Link onClick={()=> setHasClickedOnBubble(true)} className={hasClickedOnBubble ? s.clicked : ''} to={nextPage === 'Home' ? '/' : '/' + nextPage}>
-    <motion.div className={s.animationBlock} initial={{visibility: 'visible'}} exit={{visibility: 'hidden'}}>
+    <motion.div className={`${s.animationBlock} ${contacts && home ? s.wh : ''}`} initial={{visibility: 'visible'}} exit={{visibility: 'hidden'}}>
     <motion.span exit={{visibility: 'hidden'}}>{pageName}</motion.span>
     <motion.span exit={{visibility: 'hidden'}}>{currentPage}</motion.span>
       </motion.div>

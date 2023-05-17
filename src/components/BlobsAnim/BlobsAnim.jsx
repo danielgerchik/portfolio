@@ -25,6 +25,13 @@ function BlobsAnim() {
     <Blob/>
     <Blob/>
     <Blob/>
+    <Blob/>
+    <Blob/>
+    <Blob/>
+    <Blob/>
+    <Blob/>
+    <Blob/>
+    <Blob/>
     </div>
   </div>
   )

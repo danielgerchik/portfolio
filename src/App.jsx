@@ -13,11 +13,13 @@ export const MyContext = createContext()
 function App() {
   const location = useLocation()
   const [hasClickedOnBubble, setHasClickedOnBubble] = useState(false)
+  const [contacts, setContacts] = useState(false)
+  const [home, setHome] = useState(false)
   const [currentPath, setCurrentPath] = useState('')
 
   return (
     <div className="wrapper">
-      <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble, setCurrentPath, currentPath}}>
+      <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble, setCurrentPath, currentPath, setContacts, contacts, setHome, home}}>
       <AnimatePresence initial={false}>
         <Header/>
       <Routes location={location} key={location.pathname}>

@@ -2,6 +2,8 @@
     transform: translateY(90%) scale(1);
 	opacity: 1;
 	border: 3px #000 solid;
+    background-color: #fff;
+    color: #000;
     position: fixed;
 	z-index: 100;
     top: 0;
@@ -11,6 +13,14 @@
 	border-radius: 50%;
 	transition: 0.3s ease 0s;
     animation: circle 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s;
+    &.wh {
+        animation: circle_wh 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s;
+        span {
+            &:last-of-type {
+                color: #000;
+            }
+        }
+    }
     &:hover {
         transform: translateY(88%) scale(1);
     }
@@ -21,7 +31,6 @@
             left: 50%;
             transform: translateX(-50%);
             padding-top: 15px;
-            color: #000;
             font-size: 70px;
             text-decoration: none;
             .link {
@@ -70,3 +79,32 @@
         pointer-events: none;
 	}
 	}
+
+    @keyframes circle_wh{
+
+        0%{
+            background-color: #fff;
+            pointer-events: none;
+            color: #fff;
+        }
+        15% {
+            cursor: auto;
+            background-color: #fff;
+            pointer-events: none;
+            color: #fff
+        }
+        50%{
+            transform: translateY(35%) scale(1.5, 1.5);
+            background-color: #fff;
+            cursor: auto;
+            pointer-events: none;
+            color: #fff
+        }
+        100%{
+            transform: translateY(0%) scale(1.5, 1.5);
+            background-color: #fff;
+            cursor: auto;
+            pointer-events: none;
+            color: #fff
+        }
+        }
