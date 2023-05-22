@@ -4,7 +4,6 @@
     align-items: center;
 }
 .items {
-    position: relative;
     width: 100%;
 }
 .blob_bg {
@@ -14,37 +13,10 @@
     z-index: -1;
 }
 #blob1 {
-    top: 35%;
-    right: 0%;
+    top: 80%;
+    left: 25%;
 }
 #blob2 {
     top: 0%;
-    left: 0%;
-}
-.item {
-    &:not(:first-of-type) {
-        border-top: 5px solid #000;
-    }
-    &:not(:last-of-type) {
-        border-bottom: 5px solid #000;
-    }
-    .name {
-        color: #000;
-        text-decoration: none;
-        font-size: 100px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: 50px;
-        transition: .3s ease 0s;
-        &:hover {
-            transform: skewX(-15deg);
-        }
-    }
-    .arrow {
-        img {
-            width: 120px;
-        }
-    }
+    left: 50%;
 }

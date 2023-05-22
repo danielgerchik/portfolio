@@ -14,7 +14,7 @@ export default function Header(props) {
           &copy;
       </div>
       <div className={s.created}>
-      <span className={s.createdBy}>Created by</span> <span className={s.name}>Daniel Gerchik</span>
+      <span className={s.createdBy}><span>Created</span> by</span> <span className={s.name}><span>Daniel</span> Gerchik</span>
       </div>
       </div>
         </Link>

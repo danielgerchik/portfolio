@@ -9,6 +9,7 @@
 .content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     a {
         color: #000;
     }
@@ -19,6 +20,13 @@
     font-size: 30px;
     cursor: pointer;
     transition: .7s cubic-bezier(0.68,-0.55,0.265,1.55) 0s;
+    .created {
+        span {
+            @media screen and (max-width: 980px) {
+                transform: translate(-1.2em);
+            }
+        }
+    }
     &:hover {
         transform: translate(.4em, 0);
         .rightSign {
@@ -27,6 +35,9 @@
         .created {
             span {
                 transform: translate(-5em);
+                @media screen and (max-width: 980px) {
+                    transform: translate(0em);
+                }
             }
         }
     }
@@ -41,9 +52,14 @@
     overflow: hidden;
     max-width: 8em;
     white-space: nowrap;
-    span {
+    .createdBy, .name {
         display: inline-block;
         transition: .7s ease 0s;
+        span {
+            @media screen and (max-width: 980px) {
+                display: none;
+            }
+        }
     }
 
 }
