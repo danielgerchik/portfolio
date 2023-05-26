@@ -9,9 +9,14 @@
 .content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    @media screen and (min-width: 768px) {
+        align-items: center;
+    }
     a {
         color: #000;
+        @media screen and (max-width: 767px) {
+            margin-top: 13px;
+        }
     }
 }
 .logo {

@@ -11,8 +11,34 @@
         justify-content: center;
         background-color: #000;
         font-size: 50px;
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s ease 1.2s;
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+        &.initial {
+            li {
+                a {
+                   &::before {
+                    transform: translateY(0.5px) translateX(-6px);
+                }
+                }
+            }
+            li {
+                &.active {
+                    a {
+                        &::before {
+                           
+                        }
+                    }
+                }
+            }
+        }
+        }
        }
     li {
+        position: relative;
         border: 2px solid;
         border-radius: 10px;
         overflow: hidden;
@@ -26,6 +52,13 @@
         }
         &.active {
             box-shadow: 0px 0px 0px 1.5px;
+            a {
+                &::before {
+                    @media screen and (max-width: 767px) {
+                        transform: translateY(0.5px) translateX(6px);
+                    }
+                }
+            }
         }
         &:not(:last-child) {
            margin-right: 1.5em;
@@ -50,7 +83,29 @@
                }
                @media screen and (max-width: 767px) {
                 color: #fff;
+                padding: 0;
+                visibility: hidden;
+                &::before, &::after {
+                    content: attr(data-title);
+                    display: inline-block;
+                    visibility: visible;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &::before {
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+                    transform: translateY(0.5px) translateX(0px);
+                    transition: transform .3s ease 0s;
+                }
+                &::after {
+                    clip-path: polygon(0% 100%, 100% 100%, 100% 60%, 0% 60%);
+                    transform: translateY(-0.5px);
+                }
                }
         }
     }
 }
+
+
+

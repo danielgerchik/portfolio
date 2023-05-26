@@ -2,6 +2,7 @@ import React from 'react'
 import s from './Header.module.scss'
 import Navbar from '../Navbar/Navbar'
 import { Link } from 'react-router-dom'
+import Burger from '../Burger/Burger'
 
 export default function Header(props) {
   return (
@@ -19,6 +20,7 @@ export default function Header(props) {
       </div>
         </Link>
       <Navbar />
+      <Burger/>
       </div>
       </div>
   </header>
