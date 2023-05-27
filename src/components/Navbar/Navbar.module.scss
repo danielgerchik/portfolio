@@ -25,16 +25,16 @@
                 }
                 }
             }
+        }
+        }
+        &.closing {
             li {
-                &.active {
-                    a {
-                        &::before {
-                           
-                        }
-                    }
+                a {
+                   &::after {
+                    animation: close_anim 1.2s ease 0s forwards;
+                }
                 }
             }
-        }
         }
        }
     li {
@@ -107,5 +107,9 @@
     }
 }
 
-
-
+@keyframes close_anim {
+    100% {
+        transform: translateY(25px);
+        
+    }
+}

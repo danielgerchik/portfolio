@@ -1,3 +1,35 @@
+.close_btn {
+    position: relative;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: .8em .9em;
+    transform: skewY(25deg);
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    span {
+        display: inline-block;
+        color: #000;
+        font-size: 24px;
+        line-height: 1;
+    }
+    &.active {
+        animation: close_btn .3s ease 2.1s forwards;
+    }
+    &.closing {
+        pointer-events: auto;
+        opacity: 1;
+        transform: skewY(0deg) translateX(200%);
+        transition: 1.2s ease 0s;
+        & + .burger_wrap {
+            display: none;
+        }
+    }
+}
 .burger_wrap {
     @media screen and (min-width: 768px) {
         display: none;
@@ -24,6 +56,8 @@
     }
 }
 .burger {
+    animation: burger_init 1.2s ease 0s forwards;
+    transform: translateX(150%) skewY(25deg) translateY(-30%);
     position: relative;
     z-index: 10;
     display: flex;
@@ -60,9 +94,14 @@
         opacity: 0;
     }
 }
-
-@keyframes z_index_min {
+@keyframes close_btn {
     100% {
-        z-index: 0;
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+@keyframes burger_init {
+    100% {
+        transform: translateX(0) skewY(0deg) translateY(0%);
     }
 }

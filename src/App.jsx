@@ -17,10 +17,11 @@ function App() {
   const [home, setHome] = useState(false)
   const [currentPath, setCurrentPath] = useState('')
   const [isMenuOpen, setMenuOpen] = useState(false)
+  const [isClosing, setIsClosing] = useState(false)
 
   return (
     <div className="wrapper">
-      <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble, setCurrentPath, currentPath, setContacts, contacts, setHome, home, setMenuOpen, isMenuOpen}}>
+      <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble, setCurrentPath, currentPath, setContacts, contacts, setHome, home, setMenuOpen, isMenuOpen, setIsClosing, isClosing}}>
       <AnimatePresence initial={false}>
         <Header/>
       <Routes location={location} key={location.pathname}>

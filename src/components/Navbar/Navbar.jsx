@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { MyContext } from '../../App'
 
 export default function Navbar() {
-  const {currentPath, isMenuOpen} = useContext(MyContext)
+  const {currentPath, isMenuOpen, setMenuOpen, isClosing} = useContext(MyContext)
 
   const [isInitial, setIsInitial] = useState(false)
   
@@ -20,8 +20,8 @@ export default function Navbar() {
     }
   }, [isMenuOpen])
   useEffect(()=> {   
+    
     Array.from(list.current.childNodes).forEach(el => {
-
       el.classList.remove(s.active)
 
       if(el.childNodes[0].getAttribute('href') == currentPath) {
@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <>
-    <ul ref={list} className={`${s.navbar} ${isMenuOpen ? s.active : ''} ${isInitial ? s.initial : ''}`}>
+    <ul ref={list} className={`${s.navbar} ${isMenuOpen ? s.active : ''} ${isClosing ? s.closing : ''} ${isInitial ? s.initial : ''}`}>
         <li><Link data-title='About' to="/About">About</Link></li>
         <li><Link data-title='Work' to="/Work">Work</Link></li>
         <li><Link data-title='Services' to="/Services">Services</Link></li>
