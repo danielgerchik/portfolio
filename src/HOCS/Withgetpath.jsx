@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { MyContext } from '../App'
 
@@ -7,6 +7,7 @@ function Withgetpath(Page) {
     const {setCurrentPath, setContacts, setHome} = useContext(MyContext)
     const path = useLocation().pathname
     setCurrentPath(path)
+
     if(path !== '/Contacts' && path !== '/') {
       setContacts(false)
       setHome(false)

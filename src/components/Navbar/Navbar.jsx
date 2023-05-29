@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { MyContext } from '../../App'
 
 export default function Navbar() {
-  const {currentPath, isMenuOpen, setMenuOpen, isClosing} = useContext(MyContext)
+  const {currentPath, isMenuOpen, setMenuOpen, isClosing, closeMenu} = useContext(MyContext)
 
   const [isInitial, setIsInitial] = useState(false)
   
@@ -34,10 +34,10 @@ export default function Navbar() {
   return (
     <>
     <ul ref={list} className={`${s.navbar} ${isMenuOpen ? s.active : ''} ${isClosing ? s.closing : ''} ${isInitial ? s.initial : ''}`}>
-        <li><Link data-title='About' to="/About">About</Link></li>
-        <li><Link data-title='Work' to="/Work">Work</Link></li>
-        <li><Link data-title='Services' to="/Services">Services</Link></li>
-        <li><Link data-title='Contacts' to="/Contacts">Contacts</Link></li>
+        <li><Link onClick={()=> closeMenu(1000)} data-title='About' to="/About">About</Link></li>
+        <li><Link onClick={()=> closeMenu(1000)} data-title='Work' to="/Work">Work</Link></li>
+        <li><Link onClick={()=> closeMenu(1000)} data-title='Services' to="/Services">Services</Link></li>
+        <li><Link onClick={()=> closeMenu(1000)} data-title='Contacts' to="/Contacts">Contacts</Link></li>
     </ul>
     </>
   )

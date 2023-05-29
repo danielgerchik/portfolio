@@ -12,15 +12,6 @@
     bottom: 0;
 	border-radius: 50%;
 	transition: 0.3s ease 0s;
-    animation: circle 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s;
-    &.wh {
-        animation: circle_wh 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s;
-        span {
-            &:last-of-type {
-                color: #000;
-            }
-        }
-    }
     &:hover {
         transform: translateY(88%) scale(1);
     }

@@ -18,10 +18,25 @@ function App() {
   const [currentPath, setCurrentPath] = useState('')
   const [isMenuOpen, setMenuOpen] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
+  const [isHiddenBurger, setIsHiddenBurger] = useState(false)
+
+  const closeMenu = time => {
+    setTimeout(e=> {
+      setMenuOpen(false)
+      setIsClosing(true)
+      setTimeout(e=> {
+        setIsClosing(false)
+      }, 1200)
+      setTimeout(e=> {
+        setIsHiddenBurger(false)
+      }, 2000)
+    }, time)
+  }
 
   return (
     <div className="wrapper">
-      <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble, setCurrentPath, currentPath, setContacts, contacts, setHome, home, setMenuOpen, isMenuOpen, setIsClosing, isClosing}}>
+      <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble, setCurrentPath, currentPath, setContacts, 
+        contacts, setHome, home, setMenuOpen, isMenuOpen, setIsClosing, isClosing, closeMenu, isHiddenBurger, setIsHiddenBurger}}>
       <AnimatePresence initial={false}>
         <Header/>
       <Routes location={location} key={location.pathname}>
