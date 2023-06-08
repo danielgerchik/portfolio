@@ -31,13 +31,23 @@ export default function Navbar() {
     })
   }, [currentPath])
 
+  const closeMenuFunc = e => {
+    
+    if(!e.currentTarget.parentNode.classList.contains(s.active)) {
+      closeMenu(1000)
+    } else {
+      closeMenu()
+    }
+    
+  }
+
   return (
     <>
     <ul ref={list} className={`${s.navbar} ${isMenuOpen ? s.active : ''} ${isClosing ? s.closing : ''} ${isInitial ? s.initial : ''}`}>
-        <li><Link onClick={()=> closeMenu(1000)} data-title='About' to="/About">About</Link></li>
-        <li><Link onClick={()=> closeMenu(1000)} data-title='Work' to="/Work">Work</Link></li>
-        <li><Link onClick={()=> closeMenu(1000)} data-title='Services' to="/Services">Services</Link></li>
-        <li><Link onClick={()=> closeMenu(1000)} data-title='Contacts' to="/Contacts">Contacts</Link></li>
+        <li><Link onClick={closeMenuFunc} data-title='About' to="/About">About</Link></li>
+        <li><Link onClick={closeMenuFunc} data-title='Work' to="/Work">Work</Link></li>
+        <li><Link onClick={closeMenuFunc} data-title='Services' to="/Services">Services</Link></li>
+        <li><Link onClick={closeMenuFunc} data-title='Contacts' to="/Contacts">Contacts</Link></li>
     </ul>
     </>
   )

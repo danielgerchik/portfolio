@@ -21,10 +21,10 @@ const Transition = ({currentPage, nextPage}) => {
   }, [])
 
   useEffect(()=> {
-    bubbleDiv.current.style.animation = `${s.circle} 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s`
+    bubbleDiv.current.style.animation = `${window.innerWidth > 767 ? s.circle : s.circle_mobile} 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s`
     lastSpan.current.style.color = '#fff'
     if (contacts && home || isMenuOpen) {
-      bubbleDiv.current.style.animation = `${s.circle_wh} 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s`
+      bubbleDiv.current.style.animation = `${window.innerWidth > 767 ? s.circle_wh : s.circle_wh_mobile} 2.1s cubic-bezier(0.68,-0.55,0.265,1.55) 0.3s`
       lastSpan.current.style.color = '#000'
     }
   }, [contacts, home])
@@ -32,7 +32,9 @@ const Transition = ({currentPage, nextPage}) => {
 
 const clickBubble = e => {
   setHasClickedOnBubble(true)
-  closeMenu(1000)
+  if(isMenuOpen) {
+    closeMenu(1000)
+  }
 }
 
   return (
