@@ -6,24 +6,79 @@
     align-items: center;
     font-weight: 700;
     font-size: 110px;
+    @media screen and (max-width: 1180px) {
+        flex-direction: column;
+        justify-content: center;
+        font-size: 95px;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 85px;
+        align-items: flex-start;
+    }
+    @media screen and (max-width: 546px) {
+        font-size: 15vw;
+    }
     svg {
         position: absolute;
         z-index: -1;
         width: 400px;
         opacity: 0.1;
+        &:first-of-type {
+            @media screen and (max-width: 565px) {
+                left: -12%;
+                width: 350px;
+            }
+            @media screen and (max-width: 444px) {
+                width: 300px;
+            }
+        }
         &:last-of-type {
             right: 0;
             top: 40%;
+            @media screen and (max-width: 870px) {
+                right: -16%;
+            }
+            @media screen and (max-width: 565px) {
+                right: -32%;
+            }
+            @media screen and (max-width: 444px) {
+                width: 350px;
+                right: -40%;
+            }
+            @media screen and (max-width: 374px) {
+                width: 350px;
+                right: -65%;
+            }
         }
     }
 }
 .mainText {
     position: relative;
     max-width: 6em;
+    margin-right: 0.5em;
+    @media screen and (max-width: 1180px) {
+        margin: 0 0 .3em 0;
+    }
+    @media screen and (max-width: 767px) {
+        transform: skew(-0.16deg, -4.76012deg) !important;
+    }
 }
 .description {
     font-size: 60px;
     max-width: 10em;
+    @media screen and (max-width: 1180px) {
+        max-width: 100%;
+        text-align: center;
+        font-size: 50px;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 43px;
+        text-align: left;
+        transform: skew(-0.032deg, -1.49325deg) !important;
+    }
+    @media screen and (max-width: 546px) {
+        font-size: 7.5vw;
+    }
 }
 .popup_text {
     position: relative;
@@ -38,6 +93,14 @@
         top: 0;
         display: inherit;
         animation: text_to_top 1s ease 0s forwards;
+        @media screen and (max-width: 1180px) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media screen and (max-width: 767px) {
+            left: 0;
+            transform: translateX(0);
+        }
         &.active {
             animation: text_from_bottom 1s ease .6s forwards;
             top: 100%;

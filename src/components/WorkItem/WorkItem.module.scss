@@ -1,9 +1,15 @@
 .item {
     &:not(:first-of-type) {
         border-top: 5px solid #000;
+        @media screen and (max-width: 500px) {
+            border-top: 3px solid #000;
+        }
     }
     &:not(:last-of-type) {
         border-bottom: 5px solid #000;
+        @media screen and (max-width: 500px) {
+            border-bottom: 3px solid #000;
+        }
     }
     .name {
         color: #000;
@@ -15,6 +21,10 @@
         justify-content: space-between;
         padding-right: 50px;
         transition: .3s ease 0s;
+        @media screen and (max-width: 767px) {
+            font-size: 13vw;
+            padding-right: 0px;
+        }
         &:hover {
             transform: skewX(-15deg);
         }
@@ -22,6 +32,9 @@
     .arrow {
         img {
             width: 120px;
+            @media screen and (max-width: 767px) {
+                width: 18.5vw;
+            }
         }
     }
     .link_img {
@@ -35,6 +48,10 @@
         height: 250px;
         border-radius: 50%;
         transform: translate(-50%, -50%);
+        @media screen and (max-width: 767px) {
+            width: 27vw;
+            height: 27vw;
+        }
     }
     &:hover {
         .link_img {

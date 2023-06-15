@@ -1,0 +1,39 @@
+.item {
+    position: relative;
+    margin-bottom: 1.5em;
+    &:not(:last-child) {
+        margin-right: 1.5em;
+    }
+    .name {
+        font-size: 30px;
+        text-decoration: underline;
+        cursor: pointer;
+        @media screen and (max-width: 639px) {
+            font-size: 5vw;
+        }
+    }
+    .description {
+        transition: opacity .3s ease 0s;
+        background-color: #fff;
+        position: absolute;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        display: inline-block;
+        width: 350px;
+        font-size: 25px;
+        text-align: left;
+        padding: 1em;
+        line-height: 1.2;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        @media screen and (max-width: 1145px) {
+            display: none;
+        }
+    }
+    &:hover {
+        .description {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
