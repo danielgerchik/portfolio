@@ -19,6 +19,9 @@ justify-content: center;
 #blob_1 {
     top: 0;
     right: 0;
+    @media screen and (max-width: 767px) {
+        right: 50%;
+    }
 }
 #blob_2 {
     top: 35%;
@@ -92,10 +95,10 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 80%;
-    margin: 0 auto;
-    @media screen and (max-width: 1700px) and (min-width: 1146px) {
-        width: 50%;
+    width: 80.5%;
+    margin: -1.5em auto 0 auto;
+    @media screen and (max-width: 1700px) and (min-width: 1417px) {
+        width: 51%;
     }
     @media screen and (max-width: 639px) {
         width: 100%;

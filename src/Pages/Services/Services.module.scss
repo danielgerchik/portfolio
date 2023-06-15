@@ -2,18 +2,33 @@
     height: 100vh;
     display: flex;
     margin: 0 -40px;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .halfscreen {
     width: 50%;
     height: 100%;
     position: relative;
     padding: 0px 40px;
+    @media screen and (max-width: 767px) {
+       height: 30%;
+       text-align: center;
+    }
     .label {
         font-size: 110px;
         font-weight: 900;
         @media screen and (max-width: 1300px) {
             font-size: 8.5vw;
         }
+        @media screen and (max-width: 767px) {
+            font-size: 65px;
+         }
+         @media screen and (max-width: 420px) {
+            font-size: 14vw;
+         }
     }
     .label, .bg_number  {
         position: absolute;
@@ -29,5 +44,11 @@
         @media screen and (max-width: 1300px) {
             font-size: 38vw;
         }
+        @media screen and (max-width: 767px) {
+            font-size: 290px;
+         }
+         @media screen and (max-width: 420px) {
+            font-size: 63vw;
+         }
     }
 }
