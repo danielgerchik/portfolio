@@ -26,6 +26,12 @@ border: 10px solid RGBA(0,0,0,0.1);
     pointer-events: none;
     svg {
         width: 350px;
+        @media screen and (max-width: 1415px) {
+            width: 300px;
+        }
+        @media screen and (max-width: 1225px) {
+            display: none;
+        }
         path {
             transition: .3s ease 0s;
         }
@@ -36,6 +42,10 @@ border: 10px solid RGBA(0,0,0,0.1);
         left: 50%;
         transform: translate(-50%, -50%);
         pointer-events: auto;
+        @media screen and (max-width: 1225px) {
+            position: static;
+            transform: translate(0, 0);
+        }
     }
     a {
         position: relative;
@@ -43,6 +53,9 @@ border: 10px solid RGBA(0,0,0,0.1);
         font-size: 40px;
         color: #000;
         transition: 1s ease 0s;
+        @media screen and (max-width: 1225px) {
+            color: #fff;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -56,6 +69,9 @@ border: 10px solid RGBA(0,0,0,0.1);
             pointer-events: none;
             transition: 1s ease 0s;
             transform: scale(0);
+            @media screen and (max-width: 1225px) {
+                background-color: #fff;
+            }
         }
         &:hover {
             &::before {
