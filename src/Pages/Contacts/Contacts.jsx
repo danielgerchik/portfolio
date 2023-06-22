@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Transition from '../../components/Transition/Transition'
 import { motion } from "framer-motion"
 import Withgetpath from '../../HOCS/Withgetpath'
@@ -9,6 +9,17 @@ import BlobsAnim from '../../components/BlobsAnim/BlobsAnim'
 function Contacts() {
 
   const [isClicked, setIsClicked] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  
+  useEffect(e => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
+    .test(navigator.userAgent)) {
+
+      setIsMobile(true)
+
+} 
+  }, [])
 
 
   function onClickLink() {
@@ -21,8 +32,8 @@ function Contacts() {
     <> 
     <motion.div initial={{visibility: 'hidden'}} animate={{visibility: 'visible', transition: {delay: 2}}} exit={{opacity: 1, transition: {delay: 2}}}>
       <div className="container">
-      <section className={s.contacts}>
-      <BlobsAnim/>
+      <section className={`${s.contacts} ${isMobile ? s.mb : ''}`}>
+      <BlobsAnim isMobile={isMobile} />
       <div className={s.items}>
         <div className={`${s.item} ${isClicked ? s.active : ''}`}>
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">

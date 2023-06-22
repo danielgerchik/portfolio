@@ -2,12 +2,24 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    &.mb {
+        .item {
+            a {
+                color: #000;
+            }
+        }
+    }
 }
 .items {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 767px) {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .line_bg {
 position: absolute;
@@ -24,6 +36,11 @@ border: 10px solid RGBA(0,0,0,0.1);
     z-index: 60;
     overflow: hidden;
     pointer-events: none;
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 2em;
+        }
+    }
     svg {
         width: 350px;
         @media screen and (max-width: 1415px) {
@@ -53,8 +70,11 @@ border: 10px solid RGBA(0,0,0,0.1);
         font-size: 40px;
         color: #000;
         transition: 1s ease 0s;
-        @media screen and (max-width: 1225px) {
+        @media screen and (max-width: 1225px) and (min-width: 768px) {
             color: #fff;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 45px
         }
         &::before {
             content: '';

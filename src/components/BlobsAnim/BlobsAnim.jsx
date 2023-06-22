@@ -2,9 +2,9 @@ import React from 'react'
 import s from './BlobsAnim.module.scss'
 import Blob from './Blob/Blob'
 
-function BlobsAnim() {
+function BlobsAnim({isMobile}) {
   return (
-    <div className={s.bg_animation}>
+    <div className={`${s.bg_animation} ${isMobile ? s.mb : ''}`}>
     <div className={s.blob_wrap}>
     <Blob/>
     <Blob/>

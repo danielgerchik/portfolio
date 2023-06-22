@@ -5,6 +5,12 @@
     left: 0;
     right: 0;
     bottom: 0;
+    &.mb {
+        display: none; 
+    }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
     .blob_wrap {
         position: relative;
         width: 100vw;
