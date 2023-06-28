@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion"
 import Work from "./Pages/Work/Work";
 import Services from "./Pages/Services/Services";
 import Contacts from "./Pages/Contacts/Contacts";
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const MyContext = createContext() 
 
@@ -19,6 +19,18 @@ function App() {
   const [isMenuOpen, setMenuOpen] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
   const [isHiddenBurger, setIsHiddenBurger] = useState(false)
+
+  const [isMobile, setIsMobile] = useState(false)
+
+  
+  useEffect(e => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
+    .test(navigator.userAgent)) {
+
+      setIsMobile(true)
+
+} 
+  }, [])
 
   const closeMenu = time => {
     setTimeout(e=> {
@@ -36,7 +48,8 @@ function App() {
   return (
     <div className="wrapper">
       <MyContext.Provider value={{setHasClickedOnBubble, hasClickedOnBubble, setCurrentPath, currentPath, setContacts, 
-        contacts, setHome, home, setMenuOpen, isMenuOpen, setIsClosing, isClosing, closeMenu, isHiddenBurger, setIsHiddenBurger}}>
+        contacts, setHome, home, setMenuOpen, isMenuOpen, setIsClosing, isClosing, closeMenu, isHiddenBurger, setIsHiddenBurger, 
+        isMobile}}>
       <AnimatePresence initial={false}>
         <Header/>
       <Routes location={location} key={location.pathname}>
