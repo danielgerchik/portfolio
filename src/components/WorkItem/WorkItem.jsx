@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import s from './WorkItem.module.scss'
 
-function WorkItem({url, src}) {
+function WorkItem({name,url, src}) {
 
     const img = useRef(null)
 
@@ -18,7 +18,7 @@ function WorkItem({url, src}) {
 
   return (
     <div className={s.item} onMouseMove={displayImg}>
-    <a href={url} className={s.name}>Test<div className={s.arrow}><img src="/img/icons/next.png"/></div></a>
+    <a href={url} className={s.name} target='_blank'>{name}<div className={s.arrow}><img src="/img/icons/next.png"/></div></a>
     <img ref={img} className={s.link_img} src={src} />
   </div>
   )
